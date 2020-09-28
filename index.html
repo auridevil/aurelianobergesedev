@@ -29,6 +29,26 @@
       gtag("js", new Date());
       gtag("config", "UA-178405816-1");
     </script>
+    <script>
+      const pageTitle = "AURELIANO-BERGESE-DEV";
+      const getRandomIdx = () => Math.round(Math.random() * pageTitle.length);
+      setInterval(() => {
+        const randomIndexes = [
+          getRandomIdx(),
+          getRandomIdx(),
+          getRandomIdx(),
+          getRandomIdx(),
+        ];
+        document.title = pageTitle
+          .split("")
+          .map((el, idx) =>
+            randomIndexes.includes(idx)
+              ? String.fromCharCode(Math.floor(Math.random() * 254 + 1))
+              : el,
+          )
+          .join("");
+      }, 10);
+    </script>
   </head>
 
   <body>
