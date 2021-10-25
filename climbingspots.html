@@ -17,6 +17,22 @@
             color: black;
             text-decoration: none;
         }
+
+        .mapWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+
+        .mapWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178405816-1"></script>
@@ -28,11 +44,15 @@
         gtag("js", new Date());
         gtag("config", "UA-178405816-1");
     </script>
+
 </head>
 
 <body>
     <div>Climbing Spots near Cuneo</div>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1HRTzjFQekWY-83dVxl5eNC-ujFopy1ei" />
+    <div class="mapWrapper">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1HRTzjFQekWY-83dVxl5eNC-ujFopy1ei"
+            allowfullscreen></iframe>
+    </div>
     <div>keep it simple.</div>
 </body>
 
